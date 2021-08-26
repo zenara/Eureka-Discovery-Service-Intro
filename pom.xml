@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.4</version>
+		<version>2.4.10</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.appsdeveloperlog.photoapp.discovery</groupId>
 	<artifactId>photoappdiscoveryservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>photoappdiscoveryservice</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Eureka Discovery Photo App</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2020.0.3</spring-cloud.version>
