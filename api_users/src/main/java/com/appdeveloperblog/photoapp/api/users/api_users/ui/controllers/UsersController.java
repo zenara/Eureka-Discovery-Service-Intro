@@ -1,4 +1,4 @@
-package com.appdeveloperblog.photoapp.api.users.ui.controllers;
+package com.appdeveloperblog.photoapp.api.users.api_users.ui.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
