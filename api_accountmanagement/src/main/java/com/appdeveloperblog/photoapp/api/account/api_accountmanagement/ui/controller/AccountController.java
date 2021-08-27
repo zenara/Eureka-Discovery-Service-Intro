@@ -3,7 +3,6 @@ package com.appdeveloperblog.photoapp.api.account.api_accountmanagement.ui.contr
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
