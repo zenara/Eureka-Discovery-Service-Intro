@@ -14,7 +14,8 @@ public class UserEntity implements Serializable{
 
     // User Password is not saved. only the encrypted
 
-    //SerialVersionUID
+    private static final long serialVersionUID = -277991492884005033L;
+
     @Id
     @GeneratedValue
     private long id;

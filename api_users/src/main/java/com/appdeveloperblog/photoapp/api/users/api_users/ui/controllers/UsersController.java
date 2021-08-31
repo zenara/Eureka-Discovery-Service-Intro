@@ -3,6 +3,7 @@ package com.appdeveloperblog.photoapp.api.users.api_users.ui.controllers;
 import com.appdeveloperblog.photoapp.api.users.api_users.service.UserService;
 import com.appdeveloperblog.photoapp.api.users.api_users.shared.UserDto;
 import com.appdeveloperblog.photoapp.api.users.api_users.ui.models.CreateUserRequestModel;
+import com.appdeveloperblog.photoapp.api.users.api_users.ui.models.CreateUserResponseModel;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
@@ -32,7 +33,7 @@ public class UsersController {
     }
 
     @PostMapping
-    public ResponseEntity createUser(@RequestBody CreateUserRequestModel userDetails) {
+    public ResponseEntity<CreateUserResponseModel> createUser(@RequestBody CreateUserRequestModel userDetails) {
 
         ModelMapper modelMapper = new ModelMapper();
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
@@ -40,6 +41,9 @@ public class UsersController {
         UserDto userDto = modelMapper.map(userDetails, UserDto.class);
         userService.createUser(userDto);
 
-        return new ResponseEntity(HttpStatus.CREATED);
+        UserDto createdUser = userService.createUser(userDto);
+
+        CreateUserResponseModel returnValue = modelMapper.map(createdUser, CreateUserResponseModel.class);
+        return ResponseEntity.status(HttpStatus.CREATED).body(returnValue);
     }
 }
