@@ -24,3 +24,9 @@ EUREKA-CLIENT-1 - Client Application name
 ## Spring security
 - JWT token returned
 - Spring security configured to protect certain web services when accessing via the API gateway
+
+## Spring cloud config server
+Externalizes configurations and keeps a centralized configuration.
+- Secure file storage
+- Secure vault
+- Private Git repository
