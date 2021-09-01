@@ -30,7 +30,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto createUser(UserDto userDetails) {
-        // TODO Auto-generated method stub
         userDetails.setUserId(UUID.randomUUID().toString());
         userDetails.setEncryptedPassword(bCryptPasswordEncoder.encode(userDetails.getPassword()));
 
@@ -53,6 +52,15 @@ public class UserServiceImpl implements UserService {
         if (userEntity == null) throw new UsernameNotFoundException(username);
 
         return new User(userEntity.getEmail(), userEntity.getEncryptedPassword(), true, true, true, true, new ArrayList<>());
+    }
+
+    @Override
+    public UserDto getUserDetailsByEmail(String email) {
+        UserEntity userEntity = usersRepository.findByEmail(email);
+
+        if (userEntity == null) throw new UsernameNotFoundException(email);
+        
+        return new ModelMapper().map(userEntity, UserDto.class);
     }
     
 }
