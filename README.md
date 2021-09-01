@@ -6,6 +6,7 @@
 - Open Eureka Serviece Discovery Dashboard via http:localhost:<PORT> and check the registered instances.
 
 ## Spring Cloud API Gateway
+Single entry point to micro services.
 - Run Eureaka Service Discovery
 - Run API Gateway
 - Run Users Microservice
@@ -19,3 +20,7 @@ EUREKA-CLIENT-1 - Client Application name
 ## H2 In memory Database
 - Connect to the console via API_GATEWAY_URL/h2-console
 - Default jdbc url can be found from the log
+
+## Spring security
+- JWT token returned
+- Spring security configured to protect certain web services when accessing via the API gateway
