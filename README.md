@@ -30,3 +30,11 @@ Externalizes configurations and keeps a centralized configuration.
 - Secure file storage
 - Secure vault
 - Private Git repository
+
+## Spring cloud bus
+- Push configurations to micro-services while running
+
+AMQP - Advanced Message Queeuing Protocol
+
+## Spring Boot Actuator
+- Health status and useful information about micro-services can be obtained
